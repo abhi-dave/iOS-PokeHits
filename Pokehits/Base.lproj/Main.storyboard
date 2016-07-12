@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokehits" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-uW-uoZ"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6H-6R-Xny">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="QZN-IX-eGG"/>
+                                    <constraint firstAttribute="height" constant="181" id="utN-MC-uaS"/>
+                                </constraints>
+                                <state key="normal" image="Pokeball"/>
+                                <connections>
+                                    <action selector="OnpokeballclickWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IrZ-bN-Bgu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Hits" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5V8-Oy-ATJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="Hbf-Xk-JFY"/>
+                                    <constraint firstAttribute="height" constant="30" id="lPX-c6-rp6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Hits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX7-cj-3j7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="KfZ-HR-c3y"/>
+                                    <constraint firstAttribute="width" constant="199" id="NJH-Kf-zZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36a-RN-MUO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="GZw-z4-DVM"/>
+                                    <constraint firstAttribute="width" constant="192" id="JCz-o2-xGV"/>
+                                </constraints>
+                                <state key="normal" image="Pokémon_Meowth_art"/>
+                                <connections>
+                                    <action selector="OnpokemonclickWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yO7-Kp-zhA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokehits" translatesAutoresizingMaskIntoConstraints="NO" id="ce2-UO-C3F">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Bny-UI-UFk"/>
+                                    <constraint firstAttribute="height" constant="128" id="kmA-YY-Xz9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kCN-uW-uoZ" secondAttribute="bottom" id="7Pc-BE-3gL"/>
+                            <constraint firstItem="36a-RN-MUO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bo0-Gq-CDh"/>
+                            <constraint firstItem="kCN-uW-uoZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MpZ-rU-qhr"/>
+                            <constraint firstItem="36a-RN-MUO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VwF-sR-ILW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s6H-6R-Xny" secondAttribute="bottom" constant="20" id="Ya5-M0-uTX"/>
+                            <constraint firstItem="kCN-uW-uoZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-88" id="iu3-yH-Zhk"/>
+                            <constraint firstItem="ce2-UO-C3F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kR2-Nw-b7U"/>
+                            <constraint firstItem="s6H-6R-Xny" firstAttribute="top" secondItem="5V8-Oy-ATJ" secondAttribute="bottom" constant="29" id="kcW-Yq-1yr"/>
+                            <constraint firstItem="s6H-6R-Xny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mXf-Ot-Vza"/>
+                            <constraint firstItem="s6H-6R-Xny" firstAttribute="centerX" secondItem="5V8-Oy-ATJ" secondAttribute="centerX" id="pPW-4V-3Bf"/>
+                            <constraint firstItem="BX7-cj-3j7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="plB-7I-0sE"/>
+                            <constraint firstAttribute="trailing" secondItem="kCN-uW-uoZ" secondAttribute="trailing" constant="-88" id="qfI-IS-Yzc"/>
+                            <constraint firstItem="ce2-UO-C3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v3X-NR-b3x"/>
+                            <constraint firstItem="BX7-cj-3j7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zWj-Le-Jyz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hitlabel" destination="BX7-cj-3j7" id="f0b-ME-TgX"/>
+                        <outlet property="hitstxtfield" destination="5V8-Oy-ATJ" id="2qr-xD-Sud"/>
+                        <outlet property="pokeball" destination="s6H-6R-Xny" id="KlA-Vm-ku1"/>
+                        <outlet property="pokebg" destination="kCN-uW-uoZ" id="qFN-jb-Oq8"/>
+                        <outlet property="pokehits" destination="ce2-UO-C3F" id="dZj-bK-QmI"/>
+                        <outlet property="pokemon" destination="36a-RN-MUO" id="Sjg-mq-abZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="103.2" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1280" height="960"/>
+        <image name="Pokeball" width="300" height="301"/>
+        <image name="Pokehits" width="474" height="126"/>
+        <image name="Pokémon_Meowth_art" width="260" height="240"/>
+    </resources>
 </document>
